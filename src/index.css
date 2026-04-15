@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-gold: #C8860A;
+  --color-gold-dark: #8A5C00;
+  --color-gold-light: #FFF8E6;
+  --color-gold-mid: #F0A832;
+  --color-purple: #9333EA;
+  --color-purple-dark: #7E22CE;
+  --color-purple-light: #FAF5FF;
+  --color-purple-mid: #D8B4FE;
+  --color-green: #0F8C5E;
+  --color-red: #B03A1A;
+  --color-text: #1A1523;
+  --color-muted: #6B6278;
+  --color-border: #EEDDBB;
+  --color-bg: #FDF9F0;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-bg text-text leading-relaxed;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[780px] mx-auto px-6;
+  }
+  
+  .tag {
+    @apply inline-block text-[11px] font-semibold tracking-[1.5px] uppercase px-4 py-1.5 rounded-full;
+  }
+  
+  .cta-primary {
+    @apply inline-block bg-gold text-white font-semibold text-[17px] px-6 sm:px-11 py-4.5 rounded-full cursor-pointer no-underline transition-all duration-200 shadow-[0_4px_24px_rgba(200,134,10,0.28)] hover:-translate-y-0.5 hover:shadow-[0_8px_32px_rgba(200,134,10,0.36)] active:translate-y-0;
+  }
+}
